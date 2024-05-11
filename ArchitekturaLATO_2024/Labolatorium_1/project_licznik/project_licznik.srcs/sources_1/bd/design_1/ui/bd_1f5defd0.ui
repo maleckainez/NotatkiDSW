@@ -1,0 +1,48 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.840773",
+   "Default View_TopLeft":"-206,-478",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x -90 -y -140 -defaultsOSRD
+preplace port RES -pg 1 -lvl 0 -x -90 -y -310 -defaultsOSRD
+preplace port AA -pg 1 -lvl 5 -x 1180 -y -380 -defaultsOSRD
+preplace port AB -pg 1 -lvl 5 -x 1180 -y -360 -defaultsOSRD
+preplace port AC -pg 1 -lvl 5 -x 1180 -y -340 -defaultsOSRD
+preplace port AD -pg 1 -lvl 5 -x 1180 -y -320 -defaultsOSRD
+preplace port AE -pg 1 -lvl 5 -x 1180 -y -300 -defaultsOSRD
+preplace port AF -pg 1 -lvl 5 -x 1180 -y -280 -defaultsOSRD
+preplace port AG -pg 1 -lvl 5 -x 1180 -y -260 -defaultsOSRD
+preplace port CAT -pg 1 -lvl 3 -x 560 -y 60 -defaultsOSRD -bot
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 70 -y -130 -defaultsOSRD
+preplace inst dzielnik_1Khz_z_10mHz_0 -pg 1 -lvl 2 -x 350 -y -140 -defaultsOSRD
+preplace inst segments_7_driver_0 -pg 1 -lvl 4 -x 950 -y -320 -defaultsOSRD
+preplace inst blink_0 -pg 1 -lvl 1 -x 70 -y -20 -defaultsOSRD
+preplace inst bin_2_bcd_v2_0 -pg 1 -lvl 2 -x 350 -y -330 -defaultsOSRD
+preplace inst MUX_display_LED_0 -pg 1 -lvl 3 -x 640 -y -340 -defaultsOSRD
+preplace inst Licznik_2_0 -pg 1 -lvl 1 -x 70 -y -370 -defaultsOSRD
+preplace netloc sys_clock_1 1 0 1 -70 -140n
+preplace netloc clk_wiz_0_clk_out2 1 0 2 -60 -200 190
+preplace netloc clk_wiz_0_clk_out1 1 1 1 220 -150n
+preplace netloc bin_2_bcd_v2_0_Ones 1 2 1 480 -360n
+preplace netloc bin_2_bcd_v2_0_Tens 1 2 1 490 -340n
+preplace netloc MUX_display_LED_0_Data_to_LED 1 3 1 770 -340n
+preplace netloc RES_1 1 0 2 -60 -210 210
+preplace netloc segments_7_driver_0_AA 1 4 1 NJ -380
+preplace netloc segments_7_driver_0_AB 1 4 1 NJ -360
+preplace netloc segments_7_driver_0_AC 1 4 1 NJ -340
+preplace netloc segments_7_driver_0_AD 1 4 1 NJ -320
+preplace netloc segments_7_driver_0_AE 1 4 1 NJ -300
+preplace netloc segments_7_driver_0_AF 1 4 1 NJ -280
+preplace netloc segments_7_driver_0_AG 1 4 1 NJ -260
+preplace netloc dzielnik_1Khz_z_10mHz_0_clk_out 1 2 1 490 -320n
+preplace netloc blink_0_LED 1 0 2 -60 -440 200
+preplace netloc Licznik_2_0_data_out 1 1 1 210 -370n
+levelinfo -pg 1 -90 70 350 640 950 1180
+pagesize -pg 1 -db -bbox -sgen -210 -660 1250 140
+"
+}
+{
+   "da_board_cnt":"1"
+}

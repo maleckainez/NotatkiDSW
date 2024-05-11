@@ -1,0 +1,287 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6F79E13043231765",
+      "device": "xc7z020clg400-1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "dzielnik_1Khz_z_10mHz_0": "",
+      "segments_7_driver_0": "",
+      "blink_0": "",
+      "bin_2_bcd_v2_0": "",
+      "MUX_display_LED_0": "",
+      "Licznik_2_0": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "RES": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "AA": {
+        "direction": "O"
+      },
+      "AB": {
+        "direction": "O"
+      },
+      "AC": {
+        "direction": "O"
+      },
+      "AD": {
+        "direction": "O"
+      },
+      "AE": {
+        "direction": "O"
+      },
+      "AF": {
+        "direction": "O"
+      },
+      "AG": {
+        "direction": "O"
+      },
+      "CAT": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "197.700"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "10.000"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "143.688"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "96.948"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "100.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "20"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "2"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "dzielnik_1Khz_z_10mHz_0": {
+        "vlnv": "user.org:user:dzielnik_1Khz_z_10mHz:1.0",
+        "xci_name": "design_1_dzielnik_1Khz_z_10mHz_0_0"
+      },
+      "segments_7_driver_0": {
+        "vlnv": "user.org:user:segments_7_driver:1.0",
+        "xci_name": "design_1_segments_7_driver_0_0"
+      },
+      "blink_0": {
+        "vlnv": "user.org:user:blink:1.0",
+        "xci_name": "design_1_blink_0_0"
+      },
+      "bin_2_bcd_v2_0": {
+        "vlnv": "user.org:user:bin_2_bcd_v2:1.0",
+        "xci_name": "design_1_bin_2_bcd_v2_0_0"
+      },
+      "MUX_display_LED_0": {
+        "vlnv": "user.org:user:MUX_display_LED:1.0",
+        "xci_name": "design_1_MUX_display_LED_0_0"
+      },
+      "Licznik_2_0": {
+        "vlnv": "xilinx.com:module_ref:Licznik_2:1.0",
+        "xci_name": "design_1_Licznik_2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Licznik_2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_": {
+            "direction": "I"
+          },
+          "RST": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out2": {
+        "ports": [
+          "clk_wiz_0/clk_out2",
+          "blink_0/clk"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "dzielnik_1Khz_z_10mHz_0/clk"
+        ]
+      },
+      "bin_2_bcd_v2_0_Ones": {
+        "ports": [
+          "bin_2_bcd_v2_0/Ones",
+          "MUX_display_LED_0/One"
+        ]
+      },
+      "bin_2_bcd_v2_0_Tens": {
+        "ports": [
+          "bin_2_bcd_v2_0/Tens",
+          "MUX_display_LED_0/Ten"
+        ]
+      },
+      "MUX_display_LED_0_Data_to_LED": {
+        "ports": [
+          "MUX_display_LED_0/Data_to_LED",
+          "segments_7_driver_0/BCD_value"
+        ]
+      },
+      "RES_1": {
+        "ports": [
+          "RES",
+          "dzielnik_1Khz_z_10mHz_0/rst",
+          "Licznik_2_0/RST"
+        ]
+      },
+      "segments_7_driver_0_AA": {
+        "ports": [
+          "segments_7_driver_0/AA",
+          "AA"
+        ]
+      },
+      "segments_7_driver_0_AB": {
+        "ports": [
+          "segments_7_driver_0/AB",
+          "AB"
+        ]
+      },
+      "segments_7_driver_0_AC": {
+        "ports": [
+          "segments_7_driver_0/AC",
+          "AC"
+        ]
+      },
+      "segments_7_driver_0_AD": {
+        "ports": [
+          "segments_7_driver_0/AD",
+          "AD"
+        ]
+      },
+      "segments_7_driver_0_AE": {
+        "ports": [
+          "segments_7_driver_0/AE",
+          "AE"
+        ]
+      },
+      "segments_7_driver_0_AF": {
+        "ports": [
+          "segments_7_driver_0/AF",
+          "AF"
+        ]
+      },
+      "segments_7_driver_0_AG": {
+        "ports": [
+          "segments_7_driver_0/AG",
+          "AG"
+        ]
+      },
+      "dzielnik_1Khz_z_10mHz_0_clk_out": {
+        "ports": [
+          "dzielnik_1Khz_z_10mHz_0/clk_out",
+          "MUX_display_LED_0/set",
+          "CAT"
+        ]
+      },
+      "blink_0_LED": {
+        "ports": [
+          "blink_0/LED",
+          "Licznik_2_0/clk_"
+        ]
+      },
+      "Licznik_2_0_data_out": {
+        "ports": [
+          "Licznik_2_0/data_out",
+          "bin_2_bcd_v2_0/binary"
+        ]
+      }
+    }
+  }
+}
