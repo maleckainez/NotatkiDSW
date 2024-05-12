@@ -1,4 +1,4 @@
-#Zadanie Nr - "Coś tam o loginie, nie mam motywacji...."
+#Zadanie Nr5 - "Coś tam o loginie, nie mam motywacji...."
 def sprawdz_login(login):
     # Sprawdź, czy login zawiera tylko dozwolone znaki (litery, cyfry, podkreślenia)
     if not login.isalnum() or "_" in login:
