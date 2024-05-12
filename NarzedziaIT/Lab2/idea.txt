@@ -1,0 +1,4 @@
+Imię: Inez, 
+ Nazwisko: Małecka, 
+ Rok Urodzenia: 2002, 
+ Wiek usera: 2024-2002
