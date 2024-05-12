@@ -1,4 +1,4 @@
-#Zadanie Nr9 - "Stwórz prostą grę w Pythonie, w której gracz zgaduje losowo wybraną liczbę z zakresu od 1 do 100..."
+#Zadanie Nr10 - "Stwórz prostą grę w Pythonie, w której gracz zgaduje losowo wybraną liczbę z zakresu od 1 do 100..."
 import random
 
 def modul_gry():
