@@ -1,4 +1,4 @@
-#Zadanie Nr9 - "Napisz program w Pythonie, który prosi użytkownika o podanie dwóch liczb całkowitych i wykonuje ich potęgowanie...."
+#Zadanie Nr3 - "Napisz program w Pythonie, który prosi użytkownika o podanie dwóch liczb całkowitych i wykonuje ich potęgowanie...."
 def read_text_file(filename):
     try:
         with open(filename, 'r') as file:
