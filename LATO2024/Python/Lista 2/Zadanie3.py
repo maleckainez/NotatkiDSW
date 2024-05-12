@@ -1,4 +1,4 @@
-#Zadanie Nr3 - "Napisz program w Pythonie, który prosi użytkownika o podanie dwóch liczb całkowitych i wykonuje ich potęgowanie...."
+#tekstowy otwierabie blablabla"
 def otworz_plik_tekstowy(filename):
     try:
         with open(filename, 'r') as file:
