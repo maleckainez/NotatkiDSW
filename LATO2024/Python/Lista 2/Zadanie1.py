@@ -1,21 +1,31 @@
 #Zadanie Nr9 - "Stwórz prostą grę w Pythonie, w której gracz zgaduje losowo wybraną liczbę z zakresu od 1 do 100..."
-import math
-from random import random
+import random
 
-wybor_usera = 10
 def modul_gry():
     def random_number():
-        return random.randint(0,100)
-
-    print(random_number())
-    def czy_wybor_dobry():
-        if random_number() == wybor_usera:
-            print(f"Wybór jest poprawny!\nPoprawna liczba to: {random_number()}")
-        elif random_number() > wybor_usera:
-            print(f"Wybrałxś liczbę niższą niż wylosowana!")
-        elif random_number() < wybor_usera:
-            print("Wybrałxś liczbę wyższą niż wylosowana!")
-    czy_wybor_dobry()
+        return random.randint(0, 100)
+    il_prob = 1
+    wylosowana_liczba = random_number()
+    while True:
+        liczba_usera = input("Zgadij liczbę w zakresie 1-100: ")
+        print(f"Ilość twoich prób: {il_prob}")
+        il_prob = il_prob + 1
+        try:
+            liczba_usera_int = int(liczba_usera)
+        except TypeError:
+            print("Wpisano nie poprawne dane!")
+            continue
+        if liczba_usera_int < 1 or liczba_usera_int >100:
+            raise ValueError("Wpisano liczbę poza dopuszalnym zakresem!")
+            continue
+        elif liczba_usera_int < wylosowana_liczba:
+            print("Moja liczba jest większa!")
+            continue
+        elif liczba_usera_int > wylosowana_liczba:
+            print("Moja liczba jest mniejsza!")
+            continue
+        elif liczba_usera_int == wylosowana_liczba:
+            print(f"Brawo!\nZgadłeś moją liczbę!\nZajęło ci to {il_prob} prób!")
 
 if __name__ == "__main__":
     modul_gry()
