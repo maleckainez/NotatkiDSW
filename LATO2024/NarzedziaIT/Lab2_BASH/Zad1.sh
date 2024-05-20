@@ -4,18 +4,18 @@ nazwisko=$2
 rokUrodzenia=$3
 nazwaPliku=$4
 # 
-if [ "$imie" =="" ]; then
-	read -p "Nie wprowadzono imienia! \n Podaj imię: " imie
+if [[ "$imie" == "" ]]; then
+	read -p "Podaj imię: " imie
 fi
-if [ "$nazwisko" =="" ]; then 
-	read -p "Nie wprowadzono nazwiska! \n Podaj nazwisko: " nazwisko
+if [[ "$nazwisko" == "" ]]; then 
+	read -p "Podaj nazwisko: " nazwisko
 fi
-if [ "$rokUrodzenia" =="" ]; then
-	read -p "Nie wprowadzono roku urodzenia! \n Podaj rok urodzenia: " rokUrodzenia
+if [[ "$rokUrodzenia" == "" ]]; then
+	read -p "Podaj rok urodzenia: " rokUrodzenia
 fi
-if [ "$nazwaPliku" =="" ]; then 
-	read -p "Nie wprowadzono nazwy pliku do zapisu! \n Podaj nazwę nowego pliku: " nazwaPliku
-echo "Witaj $imie $nazwisko urodzony/a w $rokUrodzenia roku. Nazwa pliku do którego to zostanie zapisane to $nazwaPliku"
+if [[ "$nazwaPliku" == "" ]]; then 
+	read -p "Podaj nazwę nowego pliku: " nazwaPliku
+echo "Witaj $imie $nazwisko urodzonx w $rokUrodzenia roku. Nazwa pliku do którego to zostanie zapisane to $nazwaPliku. Twój wiek obliczono przy pomocy dwóch niezależnych id siebie funkcji to $wiekRekurencja oraz $wiekFunkcja"
 fi
 
 aktualnyRok=$(date +%Y)

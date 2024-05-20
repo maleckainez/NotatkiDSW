@@ -1,0 +1,4 @@
+Imię: , 
+ Nazwisko: , 
+ Rok Urodzenia: , 
+ Wiek usera: 2024-
