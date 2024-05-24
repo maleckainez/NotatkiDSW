@@ -19,6 +19,6 @@ echo "Witaj $imie $nazwisko urodzonx w $rokUrodzenia roku. Nazwa pliku do które
 fi
 
 aktualnyRok=$(date +%Y)
-wiekUsera=$aktualnyRok-$rokUrodzenia
+wiekUsera=$[$aktualnyRok-$rokUrodzenia]
 
-echo "Imię: $imie, \n Nazwisko: $nazwisko, \n Rok Urodzenia: $rokUrodzenia, \n Wiek usera: $wiekUsera" >> $nazwaPliku.txt
+echo "Imię: $imie, \n Nazwisko: $nazwisko, \n Rok Urodzenia: $rokUrodzenia, \n Wiek usera: $wiekUsera" > $nazwaPliku.txt
