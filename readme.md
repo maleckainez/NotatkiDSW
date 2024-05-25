@@ -13,4 +13,4 @@ Jeżeli znajdziecie jakiegoś poważnego buga, proszę zróbcie **Issue** i ozna
 ## Zgłaszanie błędów
 Błędy proszę zgłaszać w zakładce Issues dodając wypełnioną templatkę załączoną poniżej i oznaczając mnie do błędu.
 
-[Link do wzoru zgłaszania BUGA](bug.md)
+[Link do wzoru zgłaszania BUGA](https://github.com/maleckainez/NotatkiDSW/issues/new/choose)
