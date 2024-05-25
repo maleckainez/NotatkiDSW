@@ -1,28 +1,21 @@
 #!/bin/bash
 
-# Pobranie argumentów
 dzien=$1
 miesiac=$2
 
-# Sprawdzenie liczby argumentów
 if [ "$#" -ne 2 ]; then
     echo "Musisz podać argumenty: numerDnia miesiac"
     exit 1
 fi
 
-# Obliczanie dnia tygodnia
-rok=$(date +%Y)
-data="$rok-$miesiac-$dzien"
-dzien_tygodnia=$(date -d "$data" +"%u")
+aktualnyRok=$(date +%Y)
+wynik=$(date -jf "%Y-%m-%d" "$aktualnyRok-$miesiac-$dzien" "+%A" 2>/dev/null)
 
-# Sprawdzanie poprawności dnia tygodnia
-if [ $dzien_tygodnia -gt 7 ] || [ $dzien_tygodnia -lt 1 ]; then
-    echo "Niepoprawne obliczenie dnia tygodnia. Błąd w skrypcie." > plik2.txt
+if [ $? -ne 0 ]; then
+    echo "Błąd: Nieprawidłowe dane" >&2
+    echo "Błąd: Nieprawidłowe dane" >> plik2
     exit 1
 fi
 
-# Wyświetlanie wyniku
-echo "Dzień tygodnia: $dzien_tygodnia"
-
-# Zapisywanie wyniku do pliku
-echo "Dzień tygodnia: $dzien_tygodnia" >> plik1.txt
+echo "$wynik"
+echo "$wynik" >> plik1
