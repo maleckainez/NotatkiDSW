@@ -7,38 +7,32 @@ assignees: maleckainez
 
 ---
 
-## Bug Report
+## Formularz zgłoszenia błędu 
 
-**Current Behavior**
-A clear and concise description of the behavior.
+**Obecne zachodwanie kodu**
+Tutaj zawrzyj obecnie zachowanie kodu, co nie działa poprawnie, z czym pojawiają się problemy.
 
-**Input Code**
-- REPL or Repo link if applicable:
+**Kod który należy poprawić**
+- REPL lub Repo link jeżeli jest taka możliwość:
 
-```js
-var your => (code) => here;
+```python
+# tutaj wpisz nie działający fragment kodu
 ```
 
-**Expected behavior/code**
-A clear and concise description of what you expected to happen (or code).
+**Jak kod powinien się zachować (a tego nie robi)**
+Tutaj zawrzyj zwięzły opis zachowania jakiego oczekujesz od tego fragmentu kodu.
 
-**Babel Configuration (.babelrc, package.json, cli command)**
+**Proponowana zmiana w kodzie**
 
-```js
-{
-  "your": { "config": "here" }
-}
+```python
+# tutaj napisz proponowany przez ciebie kod
+# którym mam zastąpić poprzedni kod
 ```
 
-**Environment**
-- Babel version(s): [e.g. v6.0.0, v7.0.0-beta.34]
-- Node/npm version: [e.g. Node 8/npm 5]
-- OS: [e.g. OSX 10.13.4, Windows 10]
-- Monorepo: [e.g. yes/no/Lerna]
-- How you are using Babel: [e.g. `cli`, `register`, `loader`]
+**Środowisko w którym występuje błąd**
+- Wersja BASH: [e.g. GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)]
+- Wersja języka programowania kodu: [e.g. Python3.12]
+- OS: [e.g. MacOS 14.5 build: 23F79]
 
-**Possible Solution**
-<!--- Only if you have suggestions on a fix for the bug -->
-
-**Additional context/Screenshots**
-Add any other context about the problem here. If applicable, add screenshots to help explain.
+**Dodatkowy kontekst, zrzuty ekranu**
+Tutaj dokładnie opisz problem, dodaj zrzuty ekranu i wszystko inne co pozwoli mi wyeliminować błąd
