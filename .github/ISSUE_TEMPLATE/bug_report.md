@@ -2,7 +2,7 @@
 name: "\U0001F41B Zgłaszanie BUGA"
 about: "Jeśli należy coś poprawić bądź dostosować \U0001F914."
 title: 'NazwaPrzedmiotu - NazwaFolderu - NazwaPliku'
-labels: 'i:bug, i:TRIAGE'
+labels: ''
 assignees: 'maleckainez'
 
 ---
