@@ -34,5 +34,5 @@ rekurencja() {
     fi
 }
 wiekRekurencja=$(rekurencja $wiekUsera)
-#echo "Witaj $imie $nazwisko urodzonx w $rokUrodzenia roku. Nazwa pliku do którego to zostanie zapisane to $nazwaPliku. Silnie twojego wieku obliczono przy pomocy dwóch niezależnych od siebie funkcji, ich wyniki to  $wiekRekurencja oraz $wiekFunkcja"
+echo "Witaj $imie $nazwisko urodzonx w $rokUrodzenia roku. Nazwa pliku do którego to zostanie zapisane to $nazwaPliku. Silnie twojego wieku obliczono przy pomocy dwóch niezależnych od siebie funkcji, ich wyniki to  $wiekRekurencja oraz $wiekFunkcja"
 echo "Imię: $imie, \nNazwisko: $nazwisko, \nRok Urodzenia: $rokUrodzenia, \nWiek usera: $wiekUsera \nSilnia w pętli: $wiekFunkcja \nSilnia rekurencyjna: $wiekRekurencja" > $nazwaPliku.txt
