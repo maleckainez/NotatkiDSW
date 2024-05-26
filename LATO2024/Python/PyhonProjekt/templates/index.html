@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Manager</h1>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('main.add_task') }}" method="post">
+            <input type="text" name="title" placeholder="Task Title">
+            <input type="text" name="priority" placeholder="Priority">
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul>
+            {% for task in tasks %}
+            <li>
+                {{ task.title }} - {{ task.priority }}
+                <form action="{{ url_for('main.delete_task', task_id=task.id) }}" method="post" style="display: inline;">
+                    <button type="submit">Delete</button>
+                </form>
+                <form action="{{ url_for('main.edit_task', task_id=task.id) }}" method="post" style="display: inline;">
+                    <input type="text" name="title" placeholder="New Title" value="{{ task.title }}">
+                    <input type="text" name="priority" placeholder="New Priority" value="{{ task.priority }}">
+                    <button type="submit">Edit</button>
+                </form>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
