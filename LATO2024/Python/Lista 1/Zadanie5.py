@@ -21,7 +21,7 @@ class PunktTrójwymiarowy:
 if __name__ == "__main__":
     # Przykładowe użycie klasy Point3D
     Punkt1 = PunktTrójwymiarowy(1, 1, 1)
-    Punkt2 = PunktTrójwymiarowy(10, 1, 10)
+    Punkt2 = PunktTrójwymiarowy(2, 1, 1)
 
     # Dodawanie punktów
     suma_punktow = Punkt1.dodawanie(Punkt2)
