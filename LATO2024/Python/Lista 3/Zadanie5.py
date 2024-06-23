@@ -1,19 +1,26 @@
-# Stwórz generator, który zwraca liczby pierwsze.
-pierwsze = [2]
-def czy_pierwsza(liczba):
-    for dzielnik in pierwsze:
-        if liczba % dzielnik == 0:
-            return False
-        if dzielnik * dzielnik > liczba:
-            return True
-    return True
+def liczbypierwsze(koniec):
+    dzielniki = []
+    def generatorliczb(koniec):
+        for i in range(2, koniec):
+            yield i
+    def czyPierwsze():
+        for x in generatorliczb(koniec):
+            pierwsze = True
+            for dzielnik in dzielniki:
+                if x % dzielnik == 0:
+                    pierwsze = False
+                    break
+            if pierwsze:
+                yield x
+    def Pierwsze():
+        for n in czyPierwsze():
+            dzielniki.append(n)
+            yield n
 
+    pierwsze = [x for x in Pierwsze()]
+    return pierwsze
 
-def wyznacz_pierwsze(liczba):
-    for i in range(2, liczba):
-        if czy_pierwsza(i) is True:
-            pierwsze.append(i)
-    return
-
-wyznacz_pierwsze(300)
-print(pierwsze)
+if __name__ == "__main__":
+    koniec = input("Podaj liczbę końcową generatora liczb pierwszych: ")
+    koniec = int(koniec)
+    print(liczbypierwsze(koniec))
