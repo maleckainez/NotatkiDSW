@@ -14,7 +14,8 @@
     </form>
     {% if filename %}
     <h2>Wynik:</h2>
-    <p>Liczba unikalnych pojazdów: {{ count }}</p>
+    <p>Liczba wykrytych unikalnych pojazdów: {{ count }}</p>
+    <p>Realna liczba pojazdów może się róźnić.</p>
     <video width="640" height="480" controls>
         <source src="{{ url_for('processed_file', filename=processed_filename) }}" type="video/mp4">
         Twoja przeglądarka nie wspiera odtwarzania wideo.

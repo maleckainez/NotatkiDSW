@@ -88,18 +88,21 @@ def process_video(video_path):
         current_frame_vehicles = []
 
         for i in range(len(boxes)):
-            if scores[i] > 0.6:  # Próg detekcji
+            if scores[i] > 0.65:  # Próg detekcji
                 box = boxes[i] * np.array([frame.shape[0], frame.shape[1], frame.shape[0], frame.shape[1]])
                 current_frame_vehicles.append(box)
                 cv2.rectangle(frame, (int(box[1]), int(box[0])), (int(box[3]), int(box[2])), (0, 255, 0), 2)
                 label = f'Pojazd'
-                cv2.putText(frame, label, (int(box[1]), int(box[0]) - 10), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 255, 0), 2)
+                pewnosc = scores[0]
+                label2 = f'Pewnosc: {pewnosc:.2f}'
+                cv2.putText(frame, label, (int(box[1]), int(box[0]) - 30), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 255, 0), 2)
+                cv2.putText(frame, label2, (int(box[1]), int(box[0]) - 10), cv2.FONT_HERSHEY_DUPLEX, 0.7, (0, 255, 0), 2)
 
         # Aktualizacja śledzenia pojazdów
         for vehicle in current_frame_vehicles:
             match_found = False
             for track in vehicle_tracks:
-                if np.linalg.norm(vehicle[:2] - track[-1][:2]) < 50:  # Odległość progu do uznania za ten sam pojazd
+                if np.linalg.norm(vehicle[:2] - track[-1][:2]) < 160:  # Odległość progu do uznania za ten sam pojazd
                     track.append(vehicle)
                     match_found = True
                     break
