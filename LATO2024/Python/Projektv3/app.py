@@ -1,6 +1,7 @@
 import os
 from flask import Flask, request, redirect, url_for, render_template, send_from_directory
 from przetwarzanie import przetworz_wideo
+from installrequirements import zainstaluj_biblioteki
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads/'
@@ -41,6 +42,7 @@ def processed_file(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename)
 
 if __name__ == '__main__':
+    zainstaluj_biblioteki()
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     os.makedirs(app.config['PROCESSED_FOLDER'], exist_ok=True)
     app.run(debug=False)
