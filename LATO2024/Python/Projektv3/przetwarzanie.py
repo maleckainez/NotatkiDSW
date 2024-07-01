@@ -35,7 +35,6 @@ def przetworz_wideo(sciezka_wideo, processed_folder):
             break
 
         liczba_klatek += 1
-        print(f"Przetwarzanie klatki {liczba_klatek}")
 
         detekcje = wykryj_obiekty(klatka)
         boxy = detekcje['detection_boxes'][0].numpy()
@@ -47,7 +46,16 @@ def przetworz_wideo(sciezka_wideo, processed_folder):
             if skale[i] > 0.60:
                 box = boxy[i] * np.array([klatka.shape[0], klatka.shape[1], klatka.shape[0], klatka.shape[1]])
                 aktualne_pojazdy.append(box)
+
+                # Pokolorowany kwadrat
+                overlay = klatka.copy()
+                cv2.rectangle(overlay, (int(box[1]), int(box[0])), (int(box[3]), int(box[2])), (0, 255, 0), -1)
+                alpha = 0.3  # Transparency factor.
+                klatka = cv2.addWeighted(overlay, alpha, klatka, 1 - alpha, 0)
+                # Obrys kwaratu
                 cv2.rectangle(klatka, (int(box[1]), int(box[0])), (int(box[3]), int(box[2])), (0, 255, 0), 2)
+
+                # Etykiety nad boxami
                 etykieta = f'Pojazd'
                 pewnosc = skale[0]
                 etykieta2 = f'Pewnosc: {pewnosc:.2f}'
@@ -66,12 +74,12 @@ def przetworz_wideo(sciezka_wideo, processed_folder):
 
         out.write(klatka)
         dlugosc = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-        procent = liczba_klatek / dlugosc
+        procent = (liczba_klatek / dlugosc)*100
         print(f"Klatka {liczba_klatek} została przetworzona")
-        print(f"Przetworzono {procent:.2f}% filmu ")
+        print(f"Przetworzono {procent:.0f}% filmu ")
 
     unikalne_pojazdy = len(sledzenie_pojazdow)
     cap.release()
     out.release()
-    print(f"Przetwarzanie zakończone. Przetworzone wideo zapisane do {przetworzona_sciezka}")
+    print(f"Przetworzono 100% filmu. Przetworzone wideo zapisane do {przetworzona_sciezka}")
     return os.path.basename(przetworzona_sciezka), unikalne_pojazdy

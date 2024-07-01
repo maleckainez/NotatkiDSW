@@ -1,4 +1,8 @@
 .DS_Store
-.idea
+.ide/a
 *.mp4
-.venv
+.ven
+*.swp
+*.xml
+__pycache__/
+.xml
