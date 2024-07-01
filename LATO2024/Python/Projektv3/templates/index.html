@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wideo Analiza</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Wgraj swoje nagranie do analizy pojazdów</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="video/*">
+        <input type="submit" value="Wgraj">
+    </form>
+
+    {% if filename %}
+    <h2>Wynik:</h2>
+    <p>Liczba wykrytych unikalnych pojazdów: {{ count }}</p>
+    <p>Realna liczba pojazdów może się róźnić.</p>
+    <video width="640" height="480" controls>
+        <source src="{{ url_for('processed_file', filename=processed_filename) }}" type="video/mp4">
+        Twoja przeglądarka nie wspiera odtwarzania wideo.
+    </video>
+    {% endif %}
+</body>
+</html>
