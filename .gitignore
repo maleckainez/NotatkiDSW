@@ -1,5 +1,6 @@
 .DS_Store
-.ide/a
+.idea/
+.idea/.name
 *.mp4
 .ven
 *.swp
