@@ -22,7 +22,7 @@ Program ma na celu zliczać auta występujące na nagraniu wgranym przez użytko
 1. Język programowania - Python 3.12
 2. Framework - Flask, Tensorflow, Tensorflow_hub
 
-Program ten korzysta z niewielu bibliotek, zostały one zawarte w [wymagania systemowe](#Wymagania-Instalacja). Głównym językiem programowania jaki zastosowano w tym projekcie jest python 3.12 oraz framework uczenia maszynowego FensorFlow.
+Program ten korzysta z niewielu bibliotek, zostały one zawarte w [wymagania systemowe](#Wymagania-Instalacja). Głównym językiem programowania jaki zastosowano w tym projekcie jest python 3.12 oraz framework uczenia maszynowego TensorFlow.
 Z racji wykorzystania gotowego modelu detekcji obrazów dostępnego na TensorFlow Hub, wymagane jest użycie pakietu TensorFlow_hub w celu jego pobrania oraz implementacji.
 
 <a name="funkcjonalności-programu"></a>

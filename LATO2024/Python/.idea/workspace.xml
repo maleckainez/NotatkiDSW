@@ -38,11 +38,17 @@
   "keyToString": {
     "Python.PYTANIE.executor": "Run",
     "Python.app.executor": "Run",
+<<<<<<< Updated upstream
     "Python.przetwarzanie.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/inezmalecka/Desktop/Studiowanie/NotatkiDSW/LATO2024/Python",
+=======
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+>>>>>>> Stashed changes
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -80,7 +86,11 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PYTANIE_py$PYTANIE.coverage" NAME="PYTANIE Coverage Results" MODIFIED="1719664890194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PyhonProjekt" />
+<<<<<<< Updated upstream
     <SUITE FILE_PATH="coverage/app_py$app.coverage" NAME="app Coverage Results" MODIFIED="1719878500126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projektv3" />
     <SUITE FILE_PATH="coverage/app_py$przetwarzanie.coverage" NAME="przetwarzanie Coverage Results" MODIFIED="1719874285886" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projektv3" />
+=======
+    <SUITE FILE_PATH="coverage/app_py$app.coverage" NAME="app Coverage Results" MODIFIED="1719747982897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Projektv2" />
+>>>>>>> Stashed changes
   </component>
 </project>
