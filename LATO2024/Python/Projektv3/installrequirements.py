@@ -8,6 +8,7 @@ def zainstaluj_biblioteki():
     # Sprawdź, czy plik requirements.txt istnieje
     if os.path.exists(requirements_txt):
         # Wykonaj komendę pip install
-        subprocess.check_call([sys.executable, "-m", "pip3", "install", "-r", requirements_txt])
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "-r", requirements_txt])
+        print("Biblioteki zaistalowane")
     else:
         print(f"Plik {requirements_txt} nie istnieje.")
