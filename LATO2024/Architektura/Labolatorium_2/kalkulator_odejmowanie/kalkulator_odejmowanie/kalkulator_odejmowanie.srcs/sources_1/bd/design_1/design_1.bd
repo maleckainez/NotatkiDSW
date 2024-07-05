@@ -1,0 +1,283 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x9A7B2CA1247CE533",
+      "device": "xc7z020clg400-1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "clk_wiz_0": "",
+      "SERIAL_CLOCK_0": "",
+      "SERIAL_TX_FIFO_0": "",
+      "pmod_keypad_0": "",
+      "bin2bcd_0": "",
+      "kalkulator_0": ""
+    },
+    "ports": {
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_1_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "COLU": {
+        "direction": "O",
+        "left": "1",
+        "right": "4"
+      },
+      "ROW": {
+        "direction": "I",
+        "left": "1",
+        "right": "4"
+      },
+      "TX": {
+        "direction": "O"
+      },
+      "RST": {
+        "direction": "I",
+        "parameters": {
+          "POLARITY": {
+            "value": "",
+            "value_src": "weak"
+          }
+        }
+      }
+    },
+    "components": {
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_1_clk_wiz_0_0",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "143.688"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50.000"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "sys_clock"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "20.000"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "SERIAL_CLOCK_0": {
+        "vlnv": "xilinx.com:user:SERIAL_CLOCK:1.0",
+        "xci_name": "design_1_SERIAL_CLOCK_0_0",
+        "parameters": {
+          "K": {
+            "value": "3221"
+          },
+          "N": {
+            "value": "20"
+          }
+        }
+      },
+      "SERIAL_TX_FIFO_0": {
+        "vlnv": "xilinx.com:user:SERIAL_TX_FIFO:1.0",
+        "xci_name": "design_1_SERIAL_TX_FIFO_0_0"
+      },
+      "pmod_keypad_0": {
+        "vlnv": "user.org:user:pmod_keypad:1.0",
+        "xci_name": "design_1_pmod_keypad_0_0"
+      },
+      "bin2bcd_0": {
+        "vlnv": "user.org:user:bin2bcd:1.0",
+        "xci_name": "design_1_bin2bcd_0_0",
+        "parameters": {
+          "NO_BCD_DIGITS": {
+            "value": "3"
+          },
+          "NO_BITS_IN": {
+            "value": "8"
+          }
+        }
+      },
+      "kalkulator_0": {
+        "vlnv": "xilinx.com:module_ref:kalkulator:1.0",
+        "xci_name": "design_1_kalkulator_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "kalkulator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "keys": {
+            "direction": "I",
+            "left": "0",
+            "right": "15"
+          },
+          "data_lcd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "send_lcd": {
+            "direction": "O"
+          },
+          "data_to_bcd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "start_bcd": {
+            "direction": "O"
+          },
+          "bcd_done": {
+            "direction": "I"
+          },
+          "data_bcd": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "res": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "SERIAL_CLOCK_0_CLK_TX": {
+        "ports": [
+          "SERIAL_CLOCK_0/CLK_TX",
+          "SERIAL_TX_FIFO_0/CLK_TX"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "bin2bcd_0/clk",
+          "SERIAL_CLOCK_0/CLK",
+          "pmod_keypad_0/clk",
+          "SERIAL_TX_FIFO_0/CLK_WR",
+          "kalkulator_0/clk"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "RST",
+          "pmod_keypad_0/reset_n",
+          "SERIAL_TX_FIFO_0/RST",
+          "kalkulator_0/res"
+        ]
+      },
+      "pmod_keypad_0_columns": {
+        "ports": [
+          "pmod_keypad_0/columns",
+          "COLU"
+        ]
+      },
+      "rows_0_1": {
+        "ports": [
+          "ROW",
+          "pmod_keypad_0/rows"
+        ]
+      },
+      "SERIAL_TX_FIFO_0_TX": {
+        "ports": [
+          "SERIAL_TX_FIFO_0/TX",
+          "TX"
+        ]
+      },
+      "pmod_keypad_0_keys": {
+        "ports": [
+          "pmod_keypad_0/keys",
+          "kalkulator_0/keys"
+        ]
+      },
+      "bin2bcd_0_data_bcd": {
+        "ports": [
+          "bin2bcd_0/data_bcd",
+          "kalkulator_0/data_bcd"
+        ]
+      },
+      "bin2bcd_0_done": {
+        "ports": [
+          "bin2bcd_0/done",
+          "kalkulator_0/bcd_done"
+        ]
+      },
+      "kalkulator_0_data_lcd": {
+        "ports": [
+          "kalkulator_0/data_lcd",
+          "SERIAL_TX_FIFO_0/DATA"
+        ]
+      },
+      "kalkulator_0_start_bcd": {
+        "ports": [
+          "kalkulator_0/start_bcd",
+          "bin2bcd_0/start"
+        ]
+      },
+      "kalkulator_0_send_lcd": {
+        "ports": [
+          "kalkulator_0/send_lcd",
+          "SERIAL_TX_FIFO_0/WR_EN"
+        ]
+      },
+      "kalkulator_0_data_to_bcd": {
+        "ports": [
+          "kalkulator_0/data_to_bcd",
+          "bin2bcd_0/data_in"
+        ]
+      }
+    }
+  }
+}

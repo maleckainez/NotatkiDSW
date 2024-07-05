@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/design_1/ipshared/8a84/PMOD_KYPD_v2/src/debounce.vhd" \
+"../../../bd/design_1/ipshared/8a84/PMOD_KYPD_v2/src/pmod_keypad.vhd" \
+"../../../bd/design_1/ip/design_1_pmod_keypad_0_0/sim/design_1_pmod_keypad_0_0.vhd" \
+
+nosort
