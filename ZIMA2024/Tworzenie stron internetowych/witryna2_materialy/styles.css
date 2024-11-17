@@ -1,0 +1,51 @@
+*{
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+}
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    transition: 0.5s;
+    font-size: 20pt;
+    width: 100%;
+    height: 100px;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 8px 12px;
+}
+.navbar a:hover {
+    color: blueviolet;
+    text-shadow: 1px 1px 1px rgba(0, 31, 0);
+}
+.logo {
+    padding-left: 20px;
+    color: white;
+    text-align: center;
+    align-items: center;
+    display: flex; /* Dodaj flexbox */
+    justify-content: center; /* Wyśrodkowanie w poziomie (jeśli potrzebne) */
+    height: 100%; /* Dopasowanie do wysokości nawigacji */
+    gap: 10px;
+}
+.links{
+    padding-right: 20px;
+}
+.maintlo{
+    background-image: url("car-repair-362150_1280.jpg");
+    height: 480px;
+    background-attachment: inherit;
+    background-size: cover;
+    padding: 50px;
+}
+.opisonas{
+    background-color: RGB(255,255,255,0.4);
+    border-radius: 15px;
+    height: 420px;
+
+}
