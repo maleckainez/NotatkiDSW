@@ -41,11 +41,64 @@
     height: 480px;
     background-attachment: inherit;
     background-size: cover;
-    padding: 50px;
+    padding: 70px;
 }
 .opisonas{
-    background-color: RGB(255,255,255,0.4);
+    background-color: RGB(255,255,255,0.6);
+    padding: 50px;
     border-radius: 15px;
-    height: 420px;
+    height: 320px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#tytul {
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+.podtytul{
+    margin-top: 30px;
+    color: dimgray;
+    font-size: 16px;
+}
+#podtytul a{
+    text-decoration: none;
+}
+#button{
+    margin: 50px;
 
+}
+#ofertabutton{
+    font-size: 18px;
+    color: white;
+    background-color: rgb(68, 77, 90);
+    height: 60px;
+    width: 80px;
+    border-color: black;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.bigdiv{
+    margin: 40px;
+    text-align: center;
+}
+.divtitle{
+    font-size: 42px;
+}
+.flex-container {
+    display: flex;
+    margin: 40px;
+}
+
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    width: 30%;
+}
+.title{
+    font-size: 28px;
+    padding-bottom: 30px;
 }

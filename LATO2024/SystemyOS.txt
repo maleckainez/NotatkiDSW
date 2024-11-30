@@ -1,0 +1,169 @@
+1. Zaktualizuj repozytoria
+	sudo apt update 
+
+2. Zainstaluj aplikację Fail2Ban. Znajdź informację o rozpoczęciu i zakończeniu instalacji.
+(podaj komendę oraz godzinę rozpoczęcia instalacji, jak i zakończeniu)
+	sudo apt install fail2ban
+	cat /var/log/apt/history.log
+	
+3. Zainstaluj aplikację mc, a następnie ją odinstaluj. (podaj komendę oraz godzinę rozpoczęcia
+instalacji, jak i zakończeniu)
+	sudo apt install mc
+	cat /var/log/apt/history.log
+
+4. Odczytaj plik logów dotyczących autentykacji. Ile razy było niepowodzenie logowania? Jaką
+komendę wykorzystałeś?
+	vim /var/log/auth.log
+	sudo grep -Ec 'Authentication failure' /var/log/auth.log
+
+5. Utwórz nowy plik o nazwie DSW<numerindeksu> w katalogu
+/home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>. Jakie polecenie
+wykorzystałeś?
+	mkdir -p /home/amininez/DSW/52738/inez/malecka
+	touch  /home/admininez/DSW52738
+
+6. Utwórz katalog /home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>
+Jakie polecenie wykorzystałeś?
+	Zrobione w zadaniu 5 
+
+7. Utwórz katalog /home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>.
+Przenieś katalog imię do /home/<nazwauzytkownika>
+	mv /home/admininez/DSW/52738/inez/ /home/admininez/inez/
+
+8. Utwórz katalog /home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>.
+Usuń katalog <imię>
+	mkdir /home/admininez/DSW/52738/inez/malecka
+	rm -r /home/admininez/DSW/52738/inez/
+
+9. Utwórz katalog /home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>.
+Usuń katalog <imię>/<nazwisko>
+	mkdir /home/admininez/DSW/52738/inez/malecka
+	rm -r /home/admininez/DSW/52738/inez/malecka/
+
+10. Utwórz katalog /home/<nazwauzytkownika>/DSW/<numerindeksu>/<imie>/<nazwisko>.
+Następnie zmień DSW na UniwersytetDSW
+	mv /home/admininez/DSW/ /home/admininez/UniwersytetDSW/
+
+11. Jak odczytasz zawartość pliku /home/<nazwauzytkownika>/.bashrc?
+	cat /home/maleckainez/.bashrc
+
+12. Jak sprawdzisz lokalizację useradd?
+	whereis useradd
+	which useradd
+
+13. Jak sprawdzisz czy adduser jest plikiem wykonywalnym (binarnym) czy też skryptem?
+	file $(which adduser)
+
+14. W jakim języku jest napisany adduser?
+	admininez@Inez:/$ file $(which adduser)
+	/usr/sbin/adduser: Perl script text executable
+	Odpowiedź - W języku Perl
+
+15. Bez używania edytora tekstu dodaj aktualną datę i czas do pliku
+/home/<nazwauzytkownika>/plik<nrindeksu>
+	date +%d-%m-%y\ %X >> /home/admininez/plik52738
+	 date +%d/%m/%Y\ %X >> /home/admininez/plik52738
+
+16. Bez używania edytora tekstu dodaj aktualną datę i czas do pliku
+/home/<nazwauzytkownika>/plik<nrindeksu>. Odczekaj chwilę i dodaj kolejny czas.
+	wykonujesz poprzednią komendę 
+	możesz to zrobić używając ją jeszcze raz 
+	albo wpisując !!
+
+17. Znajdź, gdzie znajduje się plik (w całym systemie) o dokładnie nazwie „bashrc”. Jakie polecenie wykorzystałeś?
+	sudo find / -name "bashrc"
+
+18. Stwórz plik, a następnie go usuń
+	touch /home/admininez/plik
+	rm /home/admininez/plik
+
+19. Stwórz plik <numerindeksu> następnie zmień jego nazwę na dsw<numerindeksu>
+	touch /home/admininez/52738
+	mv  /home/admininez/52738  /home/admininez/dsw52738
+
+20. Ile miejsca zajmuje /home/<nazwauzytkownika>?
+	du -sh /home/admininez/
+
+21. W folderze /tmp utwórz plik infodlaadmina. Ustaw dla właściciela pełne prawa, dla grupy odczyt, a dla innych brak dostępu
+	touch /tmp/infodlaadmina
+	chmod 740 /tmp/infodlaadmina
+
+22. W folderze /tmp utwórz plik infodlaadmina. Zmień właściciela tego pliku na root.
+	touch /tmp/infodlaadmina
+	sudo chown root /tmp/infodlaadmina
+
+23. Używając jednego polecenia (jednej złożonej komendy) wyślij do pliku log datę. Hostname oraz nazwę użytkownika
+	echo $(date), $(hostname), $(whoami) >> /home/admininez/log.log
+
+1. Wyświetl wszystkie połączenia po IPv4 TCP
+	ss -t 
+	lub 
+	ss -tn
+
+2. Wyświetl wszystkie połączenia po IPv4 TCP wyświetlają nazwy domenowe
+	ss -ta
+	lub
+	ss -tna
+
+3. Jaki IP ma Twoja maszyna?
+	ss -4
+	lub
+	ip addr show 
+
+4. Jakie ścieżki routingu ma Twoja maszyna?
+	ip route show 
+
+5. Z jakich serwerów DNS korzysta Twoja maszyna
+	systemd-resolve —status 
+
+6. Pobierz plik proof.ovh.net/files/10Mb.dat
+	wget proof.ovh.net/files/10Mb.dat
+
+7. Pobierz plik proof.ovh.net/files/10Mb.dat przy użyciu wget. Jakiego typu jest to plik?
+	wget proof.ovh.net/files/10Mb.dat
+	file 10Mb.dat
+
+8. Pobierz plik proof.ovh.net/files/10Mb.dat przy użyciu curl. Jakiego typu jest to plik?
+	curl -O proof.ovh.net/files/10Mb.dat
+	file 10Mb.dat
+
+1. Jak sprawdzisz, ile masz wolnego miejsca na /home?
+	df -BM /home/	- w megabajtach 
+	df -h /home/		- w najczytelniejszych jednostkach
+
+2. Jak sprawdzisz, ile masz wolnej pamięci?
+	free -h 
+	lub
+	grep -E 'mem|Mem' /proc/meminfo
+
+3. Jakie masz jądro systemu? (kernel release)
+	hostnamectl
+
+4. Jak sprawdzisz z jakiej dystrybucji Linuxa korzystasz?
+	hostnamectl
+
+5. Jak sprawdzisz jaką architekturę procesora posiadasz?
+	hostnamectl
+	lub
+	lscpu
+
+6. Jaki model procesora wykorzystuje Twoja maszyna?
+	lscpu
+
+7. Jak sprawdzisz jakie masz dyski podpięte do komputera?
+	sudo fdisk -l 
+	lub
+	lsblk
+
+8. Jakie UUID ma Twój dysk /dev/sda?
+	lsblk -fs
+
+9. Ile już działa Twój komputer?
+	uptime 
+lub
+	w 
+
+10. Kto jest zalogowany do systemu?
+	w
+	lub
+	who 
