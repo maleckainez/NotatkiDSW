@@ -1,7 +1,5 @@
 # Projekt Python 2 - INEZ MAŁECKA
 
-> Niniejszy projekt został wykonany na zaliczenie drugiego semestru studiów niestacjonarnych na kierunku INFORMATYKA na Uniwersytecie DSW, przez studenta CYPRIAN MAŁECKI o numerze indeksu 52738
-
 ## Spis Treści
 * [Informacje Ogólne](#informacje-ogólne)
 * [Zastosowane Technologie](#zastosowane-technologie)
