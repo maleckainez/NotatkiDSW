@@ -1,0 +1,9 @@
+# Użyj oficjalnego obrazu Pythona jako bazy
+FROM python:3.8-slim-buster
+
+# Zainstaluj niezbędne pakiety
+CMD ["apt", "update”]
+CMD ["apt", "install”, "iputils-ping”]
+
+# Uruchom polecenie wykonywane w trybie ciągłym
+CMD ["tail", "-f", "/dev/null"] 

@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  ubuntu_container:
+    image: ubuntu:latest
+    scale: 3
+    command: /bin/bash -c "while true; do echo hello from Ubuntu; sleep 10; done"
+    networks:
+      - my_network
+
+  debian_container:
+    image: debian:latest
+    command: /bin/bash -c "while true; do echo hello from Debian; sleep 10; done"
+    networks:
+      - my_network
+
+networks:
+  my_network: 

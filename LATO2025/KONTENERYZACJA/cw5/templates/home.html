@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Dane z bazy danych</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2em;
+            background-color: #f8f8f8;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            background-color: white;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista użytkowników</h1>
+    <table>
+        <tr>
+            <th>Imię i nazwisko</th>
+            <th>Email</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+

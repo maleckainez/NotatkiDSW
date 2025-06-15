@@ -1,0 +1,26 @@
+version: '3'
+services:
+  app1:
+    image: myapp1
+    networks:
+      - network1
+
+  app2:
+    image: myapp2
+    networks:
+      - network1
+
+  app3:
+    image: myapp3
+    networks:
+      - network2
+
+  app4:
+    image: myapp4
+    networks:
+      - network2
+
+networks:
+  network1:
+  network2:
+
